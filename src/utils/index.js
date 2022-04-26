@@ -3,7 +3,7 @@ const fs = require("fs")
 const addMovie = (movieObj) => {
     try {
         const stringObj = JSON.stringify(movieObj)
-        fs.writeFileSync('./storage.json', stringObj)
+        fs.writeFileSync('../storage.json', stringObj)
     } catch (err) {
         console.log(err)
     }
@@ -11,7 +11,7 @@ const addMovie = (movieObj) => {
 
 const listMovies = () => {
     try {
-        const jsonList = fs.readFileSync('./storage.json')
+        const jsonList = fs.readFileSync('../storage.json')
         const listParser = JSON.parse(jsonList)
         console.log(listParser)
     } catch (err) {
